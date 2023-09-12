@@ -49,7 +49,6 @@ impl NexaSecp256K1POW {
 impl Drop for NexaSecp256K1POW {
     fn drop(&mut self) {
         // Destroy the secp256k1 context
-        // Consult the secp256k1 documentation for the correct function to call
         unsafe { secp256k1_context_destroy(self.ctx) };
     }
 }
